@@ -1,0 +1,18 @@
+# data and trained artifacts are not versioned
+data/*
+!data/README.md
+models/*
+!models/.gitkeep
+*.joblib
+
+# python / jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# os
+.DS_Store
+Thumbs.db

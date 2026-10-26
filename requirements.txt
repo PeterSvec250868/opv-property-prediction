@@ -1,0 +1,9 @@
+# Developed with Python 3.10
+numpy
+pandas
+scikit-learn
+imbalanced-learn
+optuna
+rdkit
+joblib
+jupyter
