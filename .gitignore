@@ -16,3 +16,6 @@ venv/
 # os
 .DS_Store
 Thumbs.db
+
+notebooks/tools_used/
+notebooks/algor_used/
