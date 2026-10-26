@@ -11,10 +11,12 @@ as part of a major-wide Kaggle competition.
 | Task | Model | Metric | Competition rank |
 |------|-------|--------|------------------|
 | Stability classification (high / medium / low) | L1 logistic regression | F1 0.85 (Kaggle public leaderboard) | **11th of 76** |
-| HOMO / LUMO regression | SVR ensembles + cluster-based sample weighting | MAE 0.078 eV (Kaggle) | **10th of 76** |
+| HOMO / LUMO regression | SVR ensembles + cluster-based sample weighting | MAE 0.08 eV (Kaggle) | **10th of 76** |
 
 - Classification: 5-fold cross-validated F1 of 0.883 ± 0.019, with SMOTE applied inside each fold to avoid leakage.
 - Regression: after the deadline, a rebuilt pipeline without percentile clipping scored MAE 0.072, which would have ranked 6th.
+- Post-competition fix: in notebook 02, the distance-to-cluster-center part of the sample weights originally used the last model from the
+  elbow loop (k=19) instead of the final k=3 model. The notebook now uses the correct model, and the re-run scores MAE 0.0800 on Kaggle.
 
 Full write-up: [`reports/report.pdf`](reports/report.pdf)
 
